@@ -23,32 +23,51 @@ let albums = [
     {
         title: 'Too Weird to Live, Too Rare to Die!',
         tracks: 10,
+    },
+
+    {
+        title: 'One More Light Live',
+        tracks: 16,
     }
 ]
 
-// SETTO ARRAY DELLE TRACKS
- let numberoftracks = [];
+let mintrack = 99;
 
-// CICLO L'ARRAY ALBUM PER RIEMPIRE QUELLO DELLE TRACKS
 albums.forEach((elem) => {
-
-    let { tracks } = elem;
-    numberoftracks.push(tracks);
+    if(elem.tracks < mintrack) {
+        mintrack = elem.tracks;
+        let { title, tracks } = elem;
+        console.log(elem)
+    }
 
 })
 
-console.log(numberoftracks)
-
-let mintrack;
-
-// CICLO ARRAY TRACKS
-for(let i=1; i<=numberoftracks.length; i++){
-    if(numberoftracks[i] < numberoftracks[i+1]) {
-       mintrack = numberoftracks[i]
-    }
-}
-
 console.log(mintrack)
+
+
+// // SETTO ARRAY DELLE TRACKS
+//  let numberoftracks = [];
+
+// // CICLO L'ARRAY ALBUM PER RIEMPIRE QUELLO DELLE TRACKS
+// albums.forEach((elem) => {
+
+//     let { tracks } = elem;
+//     numberoftracks.push(tracks);
+
+// })
+
+// console.log(numberoftracks)
+
+// let mintrack;
+
+// // CICLO ARRAY TRACKS
+// for(let i=1; i<=numberoftracks.length; i++){
+//     if(numberoftracks[i] < numberoftracks[i+1]) {
+//        mintrack = numberoftracks[i]
+//     }
+// }
+
+// console.log(mintrack)
 
 
 
@@ -85,8 +104,6 @@ let teams = [
 
     }
 ]
-
-console.log(teams);
 
 //Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
 
