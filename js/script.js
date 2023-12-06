@@ -49,3 +49,64 @@ for(let i=1; i<=numberoftracks.length; i++){
 }
 
 console.log(mintrack)
+
+
+
+
+// ------ SNACK 2
+
+// CREO UN ARRAY DI SQUADRE CHE NON ESISTONO
+let teams = [
+    {
+        nome: 'la tomodachi',
+        punti: 0,
+        falli: 0,
+
+    },
+
+    {
+        nome: 'anna oxa fc',
+        punti: 0,
+        falli: 0,
+
+    },
+
+    {
+        nome: 'real hogwarts',
+        punti: 0,
+        falli: 0,
+
+    },
+
+    {
+        nome: 'franchino united',
+        punti: 0,
+        falli: 0,
+
+    }
+]
+
+console.log(teams);
+
+//Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+
+const teams_updated = teams.map((elem) =>{
+  
+    elem.punti = Math.floor(Math.random() * 10 + 1);
+    elem.falli = Math.floor(Math.random() * 10 + 1);
+
+    return elem;
+
+})
+
+console.log(teams_updated)
+
+// CREO NUOVO ARRAY CON SOLO NOMI E FALLI SUBITI
+let teams_short = [];
+
+teams.forEach((elem) => {
+    let { nome, falli } = elem;
+    teams_short.push(nome,falli);
+})
+
+console.log(teams_short)
