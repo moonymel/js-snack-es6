@@ -31,43 +31,21 @@ let albums = [
     }
 ]
 
-let mintrack = 99;
+let mintrack = albums[0];
 
 albums.forEach((elem) => {
-    if(elem.tracks < mintrack) {
-        mintrack = elem.tracks;
-        let { title, tracks } = elem;
-        console.log(elem)
+    if(elem.tracks < mintrack.tracks) {
+        mintrack = elem;
     }
 
 })
 
 console.log(mintrack)
 
+let { title, tracks } = mintrack;
+let text = `L'album-ep con meno tracce è ${title} con ${tracks} tracce`;
+console.log(text);
 
-// // SETTO ARRAY DELLE TRACKS
-//  let numberoftracks = [];
-
-// // CICLO L'ARRAY ALBUM PER RIEMPIRE QUELLO DELLE TRACKS
-// albums.forEach((elem) => {
-
-//     let { tracks } = elem;
-//     numberoftracks.push(tracks);
-
-// })
-
-// console.log(numberoftracks)
-
-// let mintrack;
-
-// // CICLO ARRAY TRACKS
-// for(let i=1; i<=numberoftracks.length; i++){
-//     if(numberoftracks[i] < numberoftracks[i+1]) {
-//        mintrack = numberoftracks[i]
-//     }
-// }
-
-// console.log(mintrack)
 
 
 
