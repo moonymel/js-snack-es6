@@ -87,7 +87,7 @@ let teams = [
 
 const teams_updated = teams.map((elem) =>{
   
-    elem.punti = Math.floor(Math.random() * 10 + 1);
+    elem.punti = Math.floor(Math.random() * 100 + 1);
     elem.falli = Math.floor(Math.random() * 10 + 1);
 
     return elem;
@@ -101,7 +101,13 @@ let teams_short = [];
 
 teams.forEach((elem) => {
     let { nome, falli } = elem;
-    teams_short.push(nome,falli);
+
+    let team = {
+        nome,
+        falli,
+    }
+
+    teams_short.push(team);
 })
 
 console.log(teams_short)
